@@ -36,3 +36,6 @@ FROM netflix.netflix_staging
 SELECT *
 FROM duplicate_cte
 WHERE row_num > 1;
+
+SELECT *
+FROM netflix.netflix_staging;
