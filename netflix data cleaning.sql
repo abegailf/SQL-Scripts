@@ -126,6 +126,7 @@ FROM netflix.netflix_staging2;
 SELECT * 
 FROM netflix.netflix_staging2
 WHERE country ='Canada, United States, United Kingdom, France, Luxembourg';
+
 -- I want to see distinct rating
 SELECT DISTINCT rating
 FROM netflix.netflix_staging2;
@@ -144,12 +145,15 @@ SELECT *
 FROM netflix.netflix_staging2
 WHERE title LIKE 'Louis%';
 -- Yes, they are now corrected
+
 -- I want to see distinct categories
 SELECT DISTINCT listed_in
 FROM netflix.netflix_staging2;
 -- I can see that there are titles listed in multiple categories
+
 SELECT DISTINCT *
 FROM netflix.netflix_staging2;
+
 -- I also want to trim release_year and duration
 UPDATE netflix.netflix_staging2
 	SET release_year = TRIM(release_year)		
